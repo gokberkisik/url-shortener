@@ -1,0 +1,32 @@
+{
+  "name": "url-shortener",
+  "main": "server.js",
+  "description": "URL shortener for fun",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Gökberk Işık",
+  "license": "MIT",
+  "engines": {
+    "node": "^4.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongoose": "^4.2.2",
+    "body-parser": "^1.14.1",
+    "validator": "^4.2.0",
+    "serve-favicon": "^2.3.0",
+    "ejs": "^2.3.4",
+    "compression": "^1.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^1.7.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "imagemin-pngquant": "^4.2.0"
+  }
+}
