@@ -15,9 +15,9 @@
         </div>
 
         <div class="jumbotron">
-          <form class="form" role="form">
+          <form class="form" role="form" action="/add">
                 <div class="input-group input-group-lg">
-                    <input type="text" class="form-control" placeholder="Url goes here">
+                    <input type="text" class="form-control" placeholder="Url goes here" name="url">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit">Go</span></button>
                     </div>
@@ -25,6 +25,7 @@
             </form>
         </div>
 
+        <%- include('../partials/showLink') %>
 
         <footer class="footer">
             <%- include('../partials/footer') %>

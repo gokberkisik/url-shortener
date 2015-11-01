@@ -9,7 +9,7 @@ var compression = require('compression');
 var urlController = require('./controllers/url');
 
 //mongodb service
-//mongoose.connect('mongodb://localhost:27017/api');
+mongoose.connect('mongodb://localhost:27017/shortener');
 
 //express application
 var app = express();
@@ -26,6 +26,12 @@ var router = express.Router();
 
 router.route('/')
   .get(urlController.Main);
+
+router.route('/add')
+  .get(urlController.AddUrl);
+
+router.route('*')
+  .get(urlController.Error);
 
 // router.route('/recipes/:recipe_id')
 // 	.get(recipesController.getOneRecipe) //done

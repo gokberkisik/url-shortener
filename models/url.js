@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 
 var UrlSchema = new Schema({
     link: { type: String, required: true,lowercase: true, validate:validateUrl},
-    shortenedLink: { type: String },
+    shortenedLink: { type: String, required:true},
     createDate: {type:Date, default:Date.now}
 });
 
