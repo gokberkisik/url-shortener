@@ -20,18 +20,18 @@ exports.AddUrl = function (req,res) {
         shortenedLink:'Womaoh'
       });
 
-      url.save(function(error){
-        if(error){
-          // TODO: Do something
-        }else{
+      // url.save(function(error){
+      //   if(error){
+      //     // TODO: Do something
+      //   }else{
           res.render('pages/index',{title:'Welcome',
                                     description:'Url shortener',
                                     keywords:'Faik Gökberk Işık, Url shortener',
                                     url:req.query.url,
                                     showLink:true
           });
-        }
-      });
+        // }
+      // });
 
 
     } else if (req.query.url.length === 0){

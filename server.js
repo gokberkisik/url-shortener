@@ -9,7 +9,7 @@ var compression = require('compression');
 var urlController = require('./controllers/url');
 
 //mongodb service
-mongoose.connect('mongodb://localhost:27017/shortener');
+//mongoose.connect('mongodb://localhost:27017/shortener');
 
 //express application
 var app = express();
