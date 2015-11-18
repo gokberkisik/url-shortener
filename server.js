@@ -9,8 +9,8 @@ var compression = require('compression');
 var urlController = require('./controllers/url');
 
 //mongodb service
-//mongoose.connect('mongodb://localhost:27017/shortener');
-
+mongoose.connect('mongodb://localhost:27017/shortener');
+// mongoose.connect('mongodb://user:user@ds047524.mongolab.com:47524/shortener_app');
 //express application
 var app = express();
 app.set('view engine','ejs');
@@ -30,13 +30,11 @@ router.route('/')
 router.route('/add')
   .get(urlController.AddUrl);
 
+router.route('/r/:path')
+  .get(urlController.Redirect);
+
 router.route('*')
   .get(urlController.Error);
-
-// router.route('/recipes/:recipe_id')
-// 	.get(recipesController.getOneRecipe) //done
-// 	.put(authController.isAuthenticated,recipesController.updateRecipe) //done
-// 	.delete(authController.isAuthenticated,recipesController.deleteRecipe); //done
 
 app.use('/', router);
 
