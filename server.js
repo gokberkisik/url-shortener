@@ -10,7 +10,7 @@ var urlController = require('./controllers/url');
 
 //mongodb service
 //mongoose.connect('mongodb://localhost:27017/shortener');
-mongoose.connect('mongodb://user:user@ds047524.mongolab.com:47524/shortener_app');
+mongoose.connect('mongodb://' + process.env.DBUSER + ':'+ process.env.DBPASS + '@ds047524.mongolab.com:47524/shortener_app');
 //express application
 var app = express();
 app.set('view engine','ejs');
