@@ -2,4 +2,5 @@
 	`npm install`
 	`node server.js`
 
-	[Browse](http://flume.gokberkisik.com)
+
+[Browse](https://flume.herokuapp.com)
