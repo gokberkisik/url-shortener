@@ -3,4 +3,4 @@
 	`node server.js`
 
 
-[Browse](https://flume.herokuapp.com)
+[Browse](http://flume.gokberkisik.com)
