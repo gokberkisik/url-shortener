@@ -16,8 +16,9 @@ exports.AddUrl = function (req,res) {
           if(error){
             renderPage(res,true,'Something bad happend.');
           }
+          var fixUrl = FixUrl(req.query.url);
           var url = new Url({
-            link:req.query.url,
+            link:fixUrl,
             shortenedLink:baseConventer.decToGeneric(count + 1, ALPHABET)
           });
           url.save(function(error){
@@ -66,6 +67,16 @@ exports.Redirect = function (req,res) {
     });
 
 };
+
+function FixUrl(url) {
+  if (url.indexOf('http://') === 0) {
+    return url.replace('http://','');
+  }else if(url.indexOf('https://') === 0){
+    return url.replace('https://','');
+  }
+
+  return url;
+}
 
 function renderPage(res,showLink,url) {
   res.render('pages/index',{title:'Welcome',
