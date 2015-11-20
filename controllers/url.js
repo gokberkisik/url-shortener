@@ -25,7 +25,7 @@ exports.AddUrl = function (req,res) {
             if(error){
               renderPage(res,true,'Something bad happend.');
             }else{
-              var link = 'flume.herokuapp.com/r/' + url.shortenedLink;
+              var link = 'flume.gokberkisik.com/r/' + url.shortenedLink;
               renderPage(res,true,link);
             }
           });
