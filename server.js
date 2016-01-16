@@ -38,7 +38,7 @@ router.route('*')
 
 app.use(function  forceLiveDomain(req,res,next){
   var host = req.get('Host');
-  if(host === 'flume.gokberkisik.com'){
+  if(host === 'flume.herokuapp.com'){
     return res.redirect(301,'http://flume.gokberkisik.com' + req.originalUrl);
   }
   return next();
