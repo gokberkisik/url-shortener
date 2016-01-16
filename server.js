@@ -36,6 +36,14 @@ router.route('/r/:path')
 router.route('*')
   .get(urlController.Error);
 
+app.use(function  forceLiveDomain(req,res,next){
+  var host = req.get('Host');
+  if(host === 'flume.gokberkisik.com'){
+    return res.redirect(301,'http://flume.gokberkisik.com' + req.originalUrl);
+  }
+  return next();
+});
+
 app.use('/', router);
 
 // Start the server
